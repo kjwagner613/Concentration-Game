@@ -9,7 +9,17 @@ The player is shown a sequence of items and must prove they remember the sequenc
 //Getting started: Include a link to your deployed game and any instructions you
 //deem important. This should also contain a link to your planning materials.
 
-//Attributions: This section should include links to any external resources (such as
+### Attributions: 
+
+setTimeout I found at:
+[MDN setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/setTimeout)
+
+
+---
+---
+
+
+
 //libraries or assets) you used to develop your application that require attribution.
 //You can exclude this section if it does not apply to your application.
 
@@ -17,3 +27,5 @@ The player is shown a sequence of items and must prove they remember the sequenc
 //CSS, etc.
 
 //Next steps: Planned future enhancements (stretch goals).
+
+

@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 7000);
 
         setTimeout(() => {
-            imageDisplay.src = "";
+            imageDisplay.src = "./images/black.png";
         }, 7500)
     }
 
