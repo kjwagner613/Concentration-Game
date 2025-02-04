@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {ID: 11, name: 'dolphin', link: './images/dolphin.png'},
         {ID: 12, name: 'turtle', link: './images/turtle.png'},
     ];
-
+    
     const firstRan = Math.floor(Math.random() * 12 + 1);
     console.log(firstRan);
 
@@ -40,16 +40,32 @@ document.addEventListener('DOMContentLoaded', () => {
         const imageDisplay = document.getElementById('imageDisplay');
 
         setTimeout(() => {
-            imageDisplay.src = selectLinkOne;
+            imageDisplay.src ="./images/black.png";
         }, 0);
-
+        
+        setTimeout(() => {
+            imageDisplay.src = selectLinkOne;
+        }, 1000);
+        
+        setTimeout(() => {
+            imageDisplay.src ="./images/black.png";
+        }, 1500);
+        
         setTimeout(() => {
             imageDisplay.src = selectLinkTwo;
-        }, 1000);
+        }, 3500);
+
+        setTimeout(() => {
+            imageDisplay.src = "./images/black.png";
+        }, 4000);
 
         setTimeout(() => {
             imageDisplay.src = selectLinkThree;
-        }, 2000);
+        }, 7000);
+
+        setTimeout(() => {
+            imageDisplay.src = "";
+        }, 7500)
     }
 
     displayImages();
