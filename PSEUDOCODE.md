@@ -21,7 +21,7 @@ Instruction: (Ben) \
 \
 Means of accomplishing each item above:
 # 
-1. Defining array: 
+## Defining array: 
 - Source: lecture on array iterator method
  ```javascript 
     const cars = [
@@ -41,3 +41,13 @@ Means of accomplishing each item above:
 #
 Then just need a randomizer to pull 3 items of the 12, assign to another const (seq)
 present to player and compare randomizer seq const to player quiz answer const (player)
+
+## Randomizer
+ranOne
+ranTwo
+ranThree
+
+
+## Construct array with Randomizer Output
+
+call objects from array: 
