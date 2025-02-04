@@ -14,11 +14,32 @@ const pics = [ // AI used to generate these images
 ];
 
 
-const selectNameOne = pics[4].name;
-const selectLinkOne = pics[4].link;
+    const firstRan = Math.floor(Math.random() * 12 + 1);
+    console.log(firstRan);
+
+    const secondRan = Math.floor(Math.random() * 12 + 1);
+    console.log(secondRan);
+
+    const thirdRan = Math.floor(Math.random() * 12 + 1);
+    console.log(thirdRan);
+
+
+const selectNameOne = pics[firstRan].name;
+const selectLinkOne = pics[firstRan].link;
+
+const selectNameTwo = pics[secondRan].name;
+const selectLinkTwo = pics[secondRan].link;
+
+const selectNameThree = pics[thirdRan].name;
+const selectLinkThree = pics[thirdRan].link;
+
+
+
+
 
 console.log(selectNameOne, selectLinkOne)
+console.log(selectNameTwo, selectLinkTwo)
+console.log(selectNameThree, selectLinkThree)
+ 
 
-
-
-console.log((Math.random()*3));
+// console.log((Math.random() * 3)); 
