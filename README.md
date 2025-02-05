@@ -11,9 +11,11 @@ The player is shown a sequence of items and must prove they remember the sequenc
 
 ### Attributions: 
 
+- AI use - Copilot and Gemini - used to "peer-review" in that I compared  AI to AI, and provide suggestions and help find errors.
+
 - Was looking for a way to control how long the imagtes were being displayed, I found setTimeout at: [MDN setTimeout:](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/setTimeout)
 
-- I was gettinng an error saying somethign was not loaded when i knew it was there and no erors, i googled that and found: [DOM Content Loaded](https://dev.to/smpnjn/waiting-for-the-dom-to-be-ready-in-javascript-42l7) to wrap around the JavaScript
+- I was gettinng an error saying somethign was not loaded when i knew it was there and no erors, googled that and found: [DOM Content Loaded](https://dev.to/smpnjn/waiting-for-the-dom-to-be-ready-in-javascript-42l7) to wrap around the JavaScript
 
 
 
