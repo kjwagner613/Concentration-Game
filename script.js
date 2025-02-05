@@ -36,6 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(selectNameTwo, selectLinkTwo);
     console.log(selectNameThree, selectLinkThree);
 
+    const masterSet = [selectNameOne, selectNameTwo, selectNameThree];
+    
+    
+    
     function displayImages() {
         const imageDisplay = document.getElementById('imageDisplay');
 
@@ -69,4 +73,60 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     displayImages();
+
+
+const quizContainer = document.getElementById('quiz-container');
+const resultsDiv = document.getElementById('results');
+
+// Replace these with your actual picture URLs
+const pictures = [
+  "https://example.com/image1.jpg",
+  "https://example.com/image2.jpg",
+  // ... add 12 pictures
+];
+
+// const masterSet = [selectNameOne, selectNameTwo, selectNameThree];
+
+
+
+let selectedPictures = [];
+
+// Function to create picture elements
+function createPictureElement(imageUrl) {
+  const img = document.createElement('img');
+  img.src = imageUrl;
+  img.classList.add('picture');
+  img.addEventListener('click', function() {
+    if (selectedPictures.length < 3) {
+      selectedPictures.push(imageUrl);
+      img.style.border = '2px solid blue';
+    } else {
+      alert("You can only select three pictures.");
+    }
+  });
+  return img;
+}
+
+// Populate the quiz container with pictures
+// pictures.forEach(picture => {
+//   quizContainer.appendChild(createPictureElement(picture));
+// });
+
+// Function to check results
+function checkResults() {
+  let correctCount = 0;
+  selectedPictures.forEach(selected => {
+    if (masterSet.includes(selected)) {
+      correctCount++;
+    }
+  });
+  resultsDiv.innerHTML = `You got **${correctCount}** out of **3** correct!`;
+}
+console.log(masterSet);
+
+// Add a button to check results
+// const checkButton = document.createElement('button');
+// checkButton.textContent = "Check Results";
+// checkButton.addEventListener('click', checkResults);
+// resultsDiv.appendChild(checkButton);
 }); 
