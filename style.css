@@ -2,8 +2,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 400px; 
-    /* height: 300px;  */
+    width: 400px;
     border-width: 30px;
     border-color: rgb(10, 5, 111);
     border-style: solid;
@@ -16,40 +15,57 @@
     grid-gap: 10px;
     width: 400px;
     margin: 20px auto;
-  }
+}
+#quiz-container + div { 
+    display: flex;         
+    justify-content: center; 
+    margin-top: 10px;       
+}
 
-  .picture {
+.picture {
     width: 100px;
     height: 100px;
     border: 1px solid #ccc;
     cursor: pointer;
-  }
+}
 
-  #results {
+#results {
     margin-top: 20px;
     text-align: center;
-  }
+}
 
-  #start-screen {
+#start-screen {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-  }
+}
 
-#start-button {
+.game-button {
     background-color: red;
     padding: 10px 20px;
     font-size: 1.2em;
     cursor: pointer;
-    
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
 }
 
-#replay {
+.blue-button {
+    background-color: blue;
+}
+
+#replay-button {
     background-color: red;
     padding: 10px 20px;
     font-size: 1.2em;
     cursor: pointer;
-}
-  
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin-top: 1in;
+
+ }
