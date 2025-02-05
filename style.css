@@ -8,17 +8,6 @@
     border-color: rgb(10, 5, 111);
     border-style: solid;
     align-items: center;
-
-    /* padding-block: 10px; */
-    
-}
-#underConst {
-    width: 200px;
-    padding-bottom: 50px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
 }
 
 #quiz-container {
@@ -40,3 +29,27 @@
     margin-top: 20px;
     text-align: center;
   }
+
+  #start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+#start-button {
+    background-color: red;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    
+}
+
+#replay {
+    background-color: red;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+  
