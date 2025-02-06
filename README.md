@@ -1,13 +1,20 @@
-# Concentration-Game
-The player is shown a sequence of items and must prove they remember the sequence on a brief quiz.
 
-//Screenshot or logo
+<img src="https://kjwagner613.github.io/Concentration-Game/images/concentration-game-image.png" alt="Image of Game"  width = "250" height = "400" style="display: block; margin: 0 auto;">   
 
-//Your game's name: Include a description of your game and what it does.
-//Background info about the game and why you chose it is a nice touch.
+<br>
 
-//Getting started: Include a link to your deployed game and any instructions you
-//deem important. This should also contain a link to your planning materials.
+
+# Concentration Game
+The purpose of the game is to test your memory and ability to concentrate. It does this by selecting three images at random from twelve possibilities. Then you will be shown all available images and you have to select the three you were shown, in the sequence you were shown them.
+You must get two out of three correct in order to win the game.
+
+I initially chose this game because it was the only one that I had any nostalgia for, and becuase I immedialtey though of ways to enhance the game and improve the players experience. 
+
+- [Link to play the game online](https://kjwagner613.github.io/Concentration-Game)
+- [Insrtuctions Link]()
+- [Planning Materials Link](https://home.microsoftpersonalcontent.com/:fl:/g/contentstorage/CSP_73eeea4f-913f-4d41-86d3-5fed132ec629/IQKwQipqtd-aTZm2faXSg1QuAZj0wHnE2npXLCfR2LaBPFc?e=h6OQ90&nav=cz0lMkZjb250ZW50c3RvcmFnZSUyRkNTUF83M2VlZWE0Zi05MTNmLTRkNDEtODZkMy01ZmVkMTMyZWM2MjkmZD1iJTIxVC1ydWN6LVJRVTJHMDFfdEV5N0dLUkNyRU9TbDhCQk11cUdscERKODNaVnpGZm9tV2JpdlFhc2dFY2VTdGdyYSZmPTAxNDVIWUpORlFJSVZHVk5PN1RKR1pUTlQ1VVhKSUdWQk8mYz0lMkYmYT1Mb29wQXBwJnA9JTQwZmx1aWR4JTJGbG9vcC1wYWdlLWNvbnRhaW5lciZ4PSU3QiUyMnclMjIlM0ElMjJUMFJUVUh4b2IyMWxMbTFwWTNKdmMyOW1kSEJsY25OdmJtRnNZMjl1ZEdWdWRDNWpiMjE4WWlGVUxYSjFZM290VWxGVk1rY3dNVjkwUlhrM1IwdFNRM0pGVDFOc09FSkNUWFZ4UjJ4d1JFbzRNMXBXZWtabWIyMVhZbWwyVVdGelowVmpaVk4wWjNKaGZEQXhORFZJV1VwT1FsbFhRalZIUzBwUVExRmFRVEpITTB3elNUUTFXVFJHVFVnJTNEJTIyJTJDJTIyaSUyMiUzQSUyMjkzZGY3YzZlLTkwMTctNGE0Ny04NzE3LThjN2JiZTNjZTA2MyUyMiU3RA%3D%3D)
+
+
 
 ### Attributions: 
 
@@ -17,20 +24,22 @@ The player is shown a sequence of items and must prove they remember the sequenc
 
 - I was gettinng an error saying somethign was not loaded when i knew it was there and no erors, googled that and found: [DOM Content Loaded](https://dev.to/smpnjn/waiting-for-the-dom-to-be-ready-in-javascript-42l7) to wrap around the JavaScript
 
+<br>
 
+### Technology Used:
+1. Cascading Style Sheets
+    - Button placement, color
+    - Layout of images for quiz
+2. JavaScript
+    - Random selection of images to visual sequence
+    - 
+<br>
 
+### Future Enhancements:
+1. Add more to quiz and option of themes for images.
+2. Visual sequences in sound.
+3. Distrations
+    - Either sound or images, depending on what type of visual sequnce the player selected, that contrast with the visual sequence.
 
----
----
-
-
-
-//libraries or assets you used to develop your application that require attribution.
-//You can exclude this section if it does not apply to your application.
-
-//Technologies Used: List of the technologies used, for example: JavaScript, HTML,
-//CSS, etc.
-
-//Next steps: Planned future enhancements (stretch goals).
 
 
