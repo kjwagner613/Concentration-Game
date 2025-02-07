@@ -20,9 +20,12 @@ I initially chose this game because it was the only one that I had any nostalgia
 
 - AI use - Copilot and Gemini - used to "peer-review" in that I compared  AI to AI, and provide suggestions and help find errors.
 
-- Was looking for a way to control how long the imagtes were being displayed, I found setTimeout at: [MDN setTimeout:](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/setTimeout)
+- Was looking for a way to control how long the images were being displayed, I found setTimeout at: [MDN setTimeout:](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/setTimeout)
 
 - I was gettinng an error saying somethign was not loaded when i knew it was there and no erors, googled that and found: [DOM Content Loaded](https://dev.to/smpnjn/waiting-for-the-dom-to-be-ready-in-javascript-42l7) to wrap around the JavaScript
+
+- Had a pic that was flashing up during the page transition, no matter what I cleared it kept popping up, so I searched making it not appear and found: [:empty pseudoclass](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
+Also, it was touched upon during out class when we did "Anatomy of a CSS selector"
 
 <br>
 
@@ -36,9 +39,10 @@ I initially chose this game because it was the only one that I had any nostalgia
 <br>
 
 ### Future Enhancements:
-1. Add more to quiz and option of themes for images.
-2. Visual sequences in sound.
-3. Distrations
+1. Add title graphic to image viewer, instead of jumping in to black then the first image. 
+2. Add more to quiz and option of themes for images.
+3. Visual sequences in sound.
+4. Distrations
     - Either sound or images, depending on what type of visual sequnce the player selected, that contrast with the visual sequence.
 
 

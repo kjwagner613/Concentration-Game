@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,36 +8,50 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 </head>
-<body>
-   <div id="title">
-        <h1>Concentration</h1>
-    </div>
-        <div class="instructions">
-            <P>The purpose of the game is to test your memory and ability to concentrate. You will be shown three images, flashed at you at different intervals.
-            Remeber the image, and the sequence you were shown them. 
-            Next you will see all the possible images, click on the ones you were shown, in the same sequence you were shown them.
-            You must remember at least 2 correctly to win.
-            WHen you have finished selecting the three images, tap on the "Check Results" button for your score. 
-            To play again, but tap Replay 
-            If you're ready to begin, just tap the "Start Game" button below.
-            Be ready, it begins immediatly. 
-            Have fun.</P>
-        </div>
-    <div id="start-screen">
-        <h3>Click to Begin</h3>
-        <button id="start-button" class="game-button">Start Game</button>
-    </div>
 
-    <div id="game-screen" style="display: none;">
-        <img id="imageDisplay" src="" alt="Random Image" />
+<body>
+    <div id="start-screen">
+        <div class="scroll-container">
+            <div id="title">
+                <h1>Concentration</h1>
+            </div>
+            <div class="instructions">
+                <play><em>Instructions</em></play>
+                <p>
+                <ul>
+                    <li>This is a game about memory and concentration. You will be shown three random images at different intervals. They will only be up a fraction of a second and not shown again.
+                    </li><br>
+                    <li>Remember the images and the sequence in which you saw them.</li><br>
+                    <li>When the twelve images have been laid out begin selecting the images that look like yours in the same order that you saw them.</li><br>
+                    <li>When you click your images, make sure you see the button depress. You will know when you have clicked a button by the button's border. It will change colors when successfuly clicked.</li><br>
+                    <li>You must select at least two images in their correct sequence correctly, and make your selections in under <em><strong>TEN
+                        SECONDS</strong></em>, to win.</li><br>
+                    <li>The <em>Check Results</em> buttom will appear once you have completed your selection of three.
+                        You can click on it to get your score.</li><br>
+                    <li>If you would like to play again, just click the <em>Play Again</em> button at the end.</li><br>
+                    <li>When you're ready to begin, go ahead and click the <em>Start Game</em> button below. </li><br>
+                    <li>Be ready! The game begins as soon as you click that button. Have fun.</li>
+                    <ul>
+                        </p>
+            </div>
+        </div>
+
+        <p id="clickToBegin">Click "Start Game" to Begin</p>
+        <button id="start-button">Start Game</button>
+    </div>
+    </div>
+    <div id="game-screen">
+
+        <img id="imageDisplay" src="" alt="Random Image">
         <div id="quiz-container"></div>
         <div id="results" style="display: none;">
         </div>
-        <div> <button id="replay-button">Replay</button></div>
-       
-        
+        <div>
+            <div id="replay-button-container"> <button id="replay-button">Play Again</button></div>
+        </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
