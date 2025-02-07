@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
     img.addEventListener("click", function () {
       if (selectedPictures.length < 3) {
         selectedPictures.push(pic.name);
-        img.style.border = "2px solid blue";
+        img.style.border = "5px solid blue";
         if (selectedPictures.length === 3) {
           checkButton.style.display = "block";
           if (replayButton) {
