@@ -11,7 +11,7 @@ You must get two out of three correct in order to win the game.
 I initially chose this game because it was the only one that was in any way nostalgic, and becuase I immedialtey thought of ways to enhance the game and improve the player's experience.
 
 - [Link to play the game online](https://kjwagner613.github.io/Concentration-Game)
-- [Insrtuctions Link]()
+- [Insrtuctions Link](https://sites.google.com/view/concentration-game-instruct/home)
 - [Planning Materials Link](https://home.microsoftpersonalcontent.com/:fl:/g/contentstorage/CSP_73eeea4f-913f-4d41-86d3-5fed132ec629/IQKwQipqtd-aTZm2faXSg1QuAZj0wHnE2npXLCfR2LaBPFc?e=h6OQ90&nav=cz0lMkZjb250ZW50c3RvcmFnZSUyRkNTUF83M2VlZWE0Zi05MTNmLTRkNDEtODZkMy01ZmVkMTMyZWM2MjkmZD1iJTIxVC1ydWN6LVJRVTJHMDFfdEV5N0dLUkNyRU9TbDhCQk11cUdscERKODNaVnpGZm9tV2JpdlFhc2dFY2VTdGdyYSZmPTAxNDVIWUpORlFJSVZHVk5PN1RKR1pUTlQ1VVhKSUdWQk8mYz0lMkYmYT1Mb29wQXBwJnA9JTQwZmx1aWR4JTJGbG9vcC1wYWdlLWNvbnRhaW5lciZ4PSU3QiUyMnclMjIlM0ElMjJUMFJUVUh4b2IyMWxMbTFwWTNKdmMyOW1kSEJsY25OdmJtRnNZMjl1ZEdWdWRDNWpiMjE4WWlGVUxYSjFZM290VWxGVk1rY3dNVjkwUlhrM1IwdFNRM0pGVDFOc09FSkNUWFZ4UjJ4d1JFbzRNMXBXZWtabWIyMVhZbWwyVVdGelowVmpaVk4wWjNKaGZEQXhORFZJV1VwT1FsbFhRalZIUzBwUVExRmFRVEpITTB3elNUUTFXVFJHVFVnJTNEJTIyJTJDJTIyaSUyMiUzQSUyMjkzZGY3YzZlLTkwMTctNGE0Ny04NzE3LThjN2JiZTNjZTA2MyUyMiU3RA%3D%3D)
 
 ### Attributions:
