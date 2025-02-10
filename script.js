@@ -1,263 +1,214 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const startScreen = document.getElementById("start-screen");
-  const gameScreen = document.getElementById("game-screen");
-  const startButton = document.getElementById("start-button");
-  const replayButton = document.getElementById("replay-button");
-  const quizContainer = document.getElementById("quiz-container");
-  const resultsDiv = document.getElementById("results");
-  const imageDisplay = document.getElementById("imageDisplay");
+const startScreen = document.getElementById("start-screen");
+const gameScreen = document.getElementById("game-screen");
+const startButton = document.getElementById("start-button");
+const replayButton = document.getElementById("replay-button");
+const quizContainer = document.getElementById("quiz-container");
+const resultsDiv = document.getElementById("results");
+const timerDisplay = document.getElementById("timer");
+const displayedImage = document.getElementById("imageDisplay");
 
-  let selectedPictures = [];
-  let masterSet = [];
+let selectedPictures = [];
+let masterSet = [];
+let timer;
+timerDisplay.style.display = "none";
 
-  startButton.addEventListener("click", startGame);
+const quizPics = [
+  {
+    name: "bird",
+    link: "./images/bird.png",
+    alt: "AI generated cartoon drawing of a bird in a colorful tree.",
+  },
+  {
+    name: "cat",
+    link: "./images/cat.png",
+    alt: "AI generated cartoon drawing of a happy cat in a livingroom.",
+  },
+  {
+    name: "mouse",
+    link: "./images/mouse.png",
+    alt: "AI generated cartoon drawing of a mouse dancing at a party.",
+  },
+  {
+    name: "pig",
+    link: "./images/pig.png",
+    alt: "AI generated cartoon drawing of a very happy pig on a farm with friends.",
+  },
+  {
+    name: "snake",
+    link: "./images/snake.png",
+    alt: "AI generated cartoon drawing of a coiled snake in a flower garden.",
+  },
+  {
+    name: "mongoose",
+    link: "./images/mongoose.png",
+    alt: "AI generated cartoon drawing of a mongoose, dancing in a forest.",
+  },
+  {
+    name: "monkey",
+    link: "./images/monkey.png",
+    alt: "AI generated cartoon drawing of a smiling monkey playing in a tree.",
+  },
+  {
+    name: "fish",
+    link: "./images/fish.png",
+    alt: "AI generated cartoon drawing of a very colorful fish in a coral reef.",
+  },
+  {
+    name: "shark",
+    link: "./images/shark.png",
+    alt: "AI generated cartoon drawing of a jolly shark, pointing the way.",
+  },
+  {
+    name: "whale",
+    link: "./images/whale.png",
+    alt: "AI generated cartoon drawing of a giggling whale spouting a geyser.",
+  },
+  {
+    name: "dolphin",
+    link: "./images/dolphin.png",
+    alt: "AI generated cartoon drawing of a dolphin jumping out of the ocean.",
+  },
+  {
+    name: "turtle",
+    link: "./images/turtle.png",
+    alt: "AI generated cartoon drawing of a turtle, vacationing at the beach",
+  },
+];
 
-  const quizPics = [
-    {
-      ID: 1,
-      name: "bird",
-      link: "./images/bird.png",
-      alt: "AI (Copilot) Generated image of a bird.",
-    },
-    {
-      ID: 2,
-      name: "cat",
-      link: "./images/cat.png",
-      alt: "AI (Copilot) Generated image of a cat.",
-    },
-    {
-      ID: 3,
-      name: "mouse",
-      link: "./images/mouse.png",
-      alt: "AI (Copilot) Generated image of a mouse.",
-    },
-    {
-      ID: 4,
-      name: "pig",
-      link: "./images/pig.png",
-      alt: "AI (Copilot) Generated image of a pig.",
-    },
-    {
-      ID: 5,
-      name: "snake",
-      link: "./images/snake.png",
-      alt: "AI (Copilot) Generated image of a snake.",
-    },
-    {
-      ID: 6,
-      name: "mongoose",
-      link: "./images/mongoose.png",
-      alt: "AI (Copilot) Generated image of a mongoose.",
-    },
-    {
-      ID: 7,
-      name: "monkey",
-      link: "./images/monkey.png",
-      alt: "AI (Copilot) Generated image of a monkey.",
-    },
-    {
-      ID: 8,
-      name: "fish",
-      link: "./images/fish.png",
-      alt: "AI (Copilot) Generated image of a fish.",
-    },
-    {
-      ID: 9,
-      name: "shark",
-      link: "./images/shark.png",
-      alt: "AI (Copilot) Generated image of a shark.",
-    },
-    {
-      ID: 10,
-      name: "whale",
-      link: "./images/whale.png",
-      alt: "AI (Copilot) Generated image of a whale.",
-    },
-    {
-      ID: 11,
-      name: "dolphin",
-      link: "./images/dolphin.png",
-      alt: "AI (Copilot) Generated image of a dolphin.",
-    },
-    {
-      ID: 12,
-      name: "turtle",
-      link: "./images/turtle.png",
-      alt: "AI (Copilot) Generated image of a turtle.",
-    },
+startButton.addEventListener("click", startGame);
+replayButton.addEventListener("click", () => location.reload());
+
+function startGame() {
+  startScreen.style.display = "none";
+  gameScreen.style.display = "flex";
+
+  let randomNumbers = [];
+  while (randomNumbers.length < 3) {
+    let num = Math.floor(Math.random() * 12);
+    if (!randomNumbers.includes(num)) randomNumbers.push(num);
+  }
+
+  masterSet = [
+    quizPics[randomNumbers[0]].name,
+    quizPics[randomNumbers[1]].name,
+    quizPics[randomNumbers[2]].name,
   ];
 
-  function startGame() {
-    startScreen.style.display = "none";
-    document.getElementById("title").style.display = "none";
-    document.querySelector(".instructions").style.display = "none";
+  const imageLinks = [
+    quizPics[randomNumbers[0]].link,
+    quizPics[randomNumbers[1]].link,
+    quizPics[randomNumbers[2]].link,
+  ];
 
-    gameScreen.style.display = "block";
+  displayImages(imageLinks);
+}
 
-    imageDisplay.style.display = "none";
-    imageDisplay.style.visibility = "hidden";
-    imageDisplay.src = "";
+function displayImages(imageLinks) {
+  displayedImage.style.display = "none";
+  displayedImage.src = "./images/black.png";
 
-    selectedPictures = [];
-    masterSet = [];
+  setTimeout(() => {
+    displayedImage.style.display = "block";
+    displayedImage.src = "./images/black.png";
+  }, 2500);
 
-    let indexes = [];
-    while (indexes.length < 3) {
-      let randomIndex = Math.floor(Math.random() * 12);
-      if (!indexes.includes(randomIndex)) {
-        indexes.push(randomIndex);
-      }
-    }
+  setTimeout(() => {
+    displayedImage.src = imageLinks[0];
+  }, 5000);
 
-    masterSet = indexes.map((i) => quizPics[i].name);
-    let imageLinks = indexes.map((i) => quizPics[i].link);
+  setTimeout(() => {
+    displayedImage.src = "./images/black.png";
+  }, 5500);
 
-    displayImages(imageLinks);
-  }
+  setTimeout(() => {
+    displayedImage.src = imageLinks[1];
+  }, 9000);
 
-  function displayImages(imageLinks) {
-    setTimeout(() => {
-      imageDisplay.src = "./images/black.png";
-      imageDisplay.style.display = "block";
-      imageDisplay.style.visibility = "visible";
-    }, 1500);
+  setTimeout(() => {
+    displayedImage.src = "./images/black.png";
+  }, 9300);
 
-    setTimeout(() => {
-      imageDisplay.src = imageLinks[0];
-    }, 5000);
+  setTimeout(() => {
+    displayedImage.src = imageLinks[2];
+  }, 13500);
 
-    setTimeout(() => {
-      imageDisplay.src = "./images/black.png";
-    }, 5500);
+  setTimeout(() => {
+    displayedImage.src = "./images/black.png";
+  }, 13800);
 
-    setTimeout(() => {
-      imageDisplay.src = imageLinks[1];
-    }, 9000);
+  setTimeout(() => {
+    displayedImage.style.display = "none";
+    displayedImage.src = "";
+  }, 14500);
 
-    setTimeout(() => {
-      imageDisplay.src = "./images/black.png";
-    }, 9300);
+  setTimeout(populateQuiz, 15500);
+}
 
-    setTimeout(() => {
-      imageDisplay.src = imageLinks[2];
-    }, 13500);
+function populateQuiz() {
+  quizContainer.innerHTML = "";
+  selectedPictures = [];
 
-    setTimeout(() => {
-      imageDisplay.src = "./images/black.png";
-    }, 13800);
-
-    setTimeout(() => {
-      imageDisplay.style.display = "none";
-      imageDisplay.src = "";
-    }, 14500);
-
-    setTimeout(populateQuiz, 15500);
-  }
-
-  function createPictureElement(pic) {
+  quizPics.forEach((pic) => {
     const img = document.createElement("img");
     img.src = pic.link;
     img.classList.add("picture");
-    img.addEventListener("click", function () {
+
+    img.addEventListener("click", () => {
       if (selectedPictures.length < 3) {
         selectedPictures.push(pic.name);
-        img.style.border = "5px solid blue";
+        img.classList.add("selected");
+
         if (selectedPictures.length === 3) {
-          checkButton.style.display = "block";
-          if (replayButton) {
-            replayButton.style.display = "block";
-          }
+          checkResults();
         }
-      } else {
       }
     });
-    return img;
-  }
-  const faultMessage = document.createElement("p");
-  faultMessage.id = "times-up-message";
-  faultMessage.style.display = "none";
-  faultMessage.style.textAlign = "center";
-  faultMessage.style.fontSize = "20px";
-  quizContainer.parentNode.insertBefore(
-    faultMessage,
-    quizContainer.nextSibling
-  );
 
-  function timesUp() {
-    faultMessage.textContent = "Time's up, sorry you lose.";
-    faultMessage.style.display = "block";
-    if (replayButton) {
-      replayButton.style.display = "block";
+    quizContainer.appendChild(img);
+  });
+
+  startTimer();
+}
+
+function startTimer() {
+  timerDisplay.style.display = "block";
+  let timeLeft = 10;
+  timerDisplay.textContent = `Time Left: ${timeLeft}s`;
+
+  timer = setInterval(() => {
+    timeLeft--;
+    timerDisplay.textContent = `Time Left: ${timeLeft}s`;
+
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      timerDisplay.style.display = "none";
+      checkResults(true); // Indicate time's up
     }
-    checkResults();
-  }
-  let timer;
-  let timeLeft = 0;
+  }, 1000); // Only ONE setInterval here
+}
 
-  function startTimer() {
-    timeLeft = 10;
-    timer = setInterval(() => {
-      timeLeft--;
-      console.log("Time left:", timeLeft);
+function checkResults(timeIsUp = false) {
+  clearInterval(timer);
+  timerDisplay.style.display = "none";
 
-      if (timeLeft < 0) {
-        clearInterval(timer);
-        timesUp();
-      }
-    }, 1000);
-  }
+  let correctCount = selectedPictures.filter(
+    (pic, index) => pic === masterSet[index]
+  ).length;
 
-  function populateQuiz() {
-    quizContainer.innerHTML = "";
-    quizPics.forEach((pic) => {
-      quizContainer.appendChild(createPictureElement(pic));
-    });
+  resultsDiv.style.display = "block";
 
-    startTimer();
-  }
-
-  const checkButton = document.createElement("button");
-  checkButton.textContent = "Check Results";
-  checkButton.className = "game-button";
-  checkButton.style.display = "none";
-
-  const buttonContainer = document.createElement("div");
-  buttonContainer.appendChild(checkButton);
-  quizContainer.parentNode.insertBefore(
-    buttonContainer,
-    quizContainer.nextSibling
-  );
-
-  if (replayButton) {
-    replayButton.style.display = "none";
-    replayButton.addEventListener("click", () => {
-      window.location.href = "index.html";
-    });
-  }
-
-  function checkResults() {
-    clearInterval(timer);
-
-    let correctCount = 0;
-    for (let i = 0; i < 3; i++) {
-      if (selectedPictures[i] === masterSet[i]) {
-        correctCount++;
-      }
-    }
-
-    const percentage = Math.round((correctCount / 3) * 100);
-
-    let message = `You got <b>${correctCount}</b> out of <b>3</b> correct! (${percentage}%)`;
-
-    if (percentage > 60) {
-      message += " 🎉 You Win!";
+  if (timeIsUp) {
+    if (correctCount < 2) {
+      resultsDiv.innerHTML = `<b style="color: white; font-size: 20px;">Time's up, you have ${correctCount} correct, you need at least two, sorry you lose.</b>`;
     } else {
-      message += " 😔 Sorry, you lose. Try again!";
+      resultsDiv.innerHTML = `<b style="color: white; font-size: 30px;">Time's up, Congratulations you have ${correctCount} correct! You Win!</b>`;
     }
-
-    resultsDiv.innerHTML = message;
-    resultsDiv.style.display = "block";
+  } else if (correctCount === 3) {
+    resultsDiv.innerHTML = `<b style="color: white; font-size: 20px;">Terrific! Perfect, you got all three within your allotted time!!! Winner!!!!</b>`;
+  } else if (selectedPictures.length === 3 && correctCount < 2) {
+    // Combined condition
+    resultsDiv.innerHTML = `<b style="color: white; font: 10px;">You got ${correctCount} out of 3 correct. Sorry, you lose.</b>`;
   }
 
-  checkButton.addEventListener("click", checkResults);
-});
+  replayButton.style.display = "block";
+}

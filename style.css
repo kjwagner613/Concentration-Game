@@ -1,72 +1,32 @@
-#imageDisplay {
-  display: none;
-  visibility: hidden;
-  width: 400px;
-  border-width: 30px;
-  border-color: rgb(10, 5, 111);
-  border-style: solid;
-  margin: 0 auto;
+h1 {
+  font-size: 6vh;
+  margin-bottom: 0;
+  margin-top: 8vh;
 }
 
-#imageDisplay:empty {
-  display: none;
-}
-
-#title {
-  font-size: 35px;
+h2 {
+  font-style: italic;
+  color: red;
+  margin-top: 0;
+  font-size: 4vh;
+  margin-bottom: 1vh;
   text-align: center;
 }
 
-.instructions {
-  margin: 0 auto;
-  max-width: 1000px;
-  font-size: 20px;
-}
-
-play {
-  font-size: 40px;
-  display: block;
-  text-align: center;
-}
-
-#quiz-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-  width: 600px;
-  margin: 20px auto;
-}
-
-#quiz-container + div {
+p {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.picture {
-  width: 100px;
-  height: 100px;
-  border: 5px solid red;
-  cursor: pointer;
-}
-
-#results {
-  margin-top: 20px;
-  text-align: center;
-}
-
-#clickToBegin {
-  font-size: 25px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#start-screen {
-  display: flex;
+  line-height: 1.5;
+  margin: 1vh;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  max-width: 800px;
+  font-size: 2.3vh;
+}
+
+body {
+  background-color: #5c87adff;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
 }
 
 #game-screen {
@@ -74,41 +34,77 @@ play {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 
-#replay-button-container {
+#start-screen {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  width: 100%;
+  height: 90vh;
+  width: 100vw;
 }
 
-#replay-button {
-  background-color: red;
-  padding: 10px 20px;
-  font-size: 20px;
+#imageDisplay {
+  width: 400px;
+  height: auto;
+  display: none;
+  border: 10px solid transparent;
+  border-image: linear-gradient(to bottom, #999, #555) 1;
+  margin-bottom: 15px;
+}
+
+#quiz-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4px;
+  width: 500px;
+  height: auto;
+  margin-bottom: 3vh;
+}
+
+.picture {
+  width: 120px;
+  height: 120px;
+  border: 5px solid red;
   cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-weight: bold;
-  margin-top: 20px;
 }
 
-#start-button,
-.game-button {
-  background-color: red;
-  padding: 10px 20px;
+.picture.selected {
+  border-color: blue;
+}
+
+#timer {
+  display: block;
   font-size: 20px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-#times-up-message {
   color: red;
+  font-weight: bold;
   margin-top: 10px;
+}
+
+.button {
+  background-color: red;
+  padding: 1vh 3vw;
+  font-size: 4vh;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+}
+
+.button:hover {
+  background-color: darkred;
+}
+
+.instructions {
+  text-align: left;
+  max-width: 800px;
+  font-size: 2vh;
+  margin-top: 1vm;
+  margin-bottom: 0;
 }
