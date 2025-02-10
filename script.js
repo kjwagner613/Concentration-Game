@@ -182,9 +182,9 @@ function startTimer() {
     if (timeLeft <= 0) {
       clearInterval(timer);
       timerDisplay.style.display = "none";
-      checkResults(true); // Indicate time's up
+      checkResults(true);
     }
-  }, 1000); // Only ONE setInterval here
+  }, 1000);
 }
 
 function checkResults(timeIsUp = false) {
@@ -206,7 +206,6 @@ function checkResults(timeIsUp = false) {
   } else if (correctCount === 3) {
     resultsDiv.innerHTML = `<b style="color: white; font-size: 20px;">Terrific! Perfect, you got all three within your allotted time!!! Winner!!!!</b>`;
   } else if (selectedPictures.length === 3 && correctCount < 2) {
-    // Combined condition
     resultsDiv.innerHTML = `<b style="color: white; font: 10px;">You got ${correctCount} out of 3 correct. Sorry, you lose.</b>`;
   }
 
