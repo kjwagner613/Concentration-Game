@@ -4,6 +4,7 @@ h1 {
   margin-top: 0;
 }
 
+
 h2 {
   font-style: italic;
   color: red;
@@ -105,12 +106,34 @@ body {
 
 .button:hover {
   background-color: darkred;
+  transform: scale(1.10);
+  transition: transform 0.2s;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
 }
 
 .instructions {
   text-align: left;
-  max-width: 800px;
+  max-width: 1200px;
   font-size: 2vh;
   margin-top: 1vm;
   margin-bottom: 0;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 15px ridge rgba(255, 255, 255, 0.4);
+}
+
+.instruct-p {
+  text-align: center;
+  color: red;
+  font-size: 4vh;
+  margin-top: 1vh;
+  text-decoration: underline;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    text-decoration: none;
+  }
 }
