@@ -1,3 +1,25 @@
+#rotate-message {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+@media (orientation: portrait) {
+  #rotate-message {
+    display: flex;
+  }
+}
+
 h1 {
   font-size: 6vh;
   margin-bottom: 0;
