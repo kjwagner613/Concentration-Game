@@ -204,7 +204,7 @@ function checkResults(timeIsUp = false) {
       resultsDiv.innerHTML = `<b style="color: black; background-color: gold; border: 10px ridge silver; font-size: 30px;">Time's up, Congratulations you have ${correctCount} correct! You Win!</b>`;
     }
   } else if (correctCount === 3) {
-    resultsDiv.innerHTML = `<b style="color: black; background-color: gold; border: 10px ridge silver; font-size: 20px;">Terrific! Perfect, you got all three within your allotted time!!! Winner!!!!</b>`;
+    resultsDiv.innerHTML = `<b style="color: black; background-color: gold; border: 10px ridge silver; font-size: 20px;">Perfect! You got all three within your allotted time!!! Winner!!!!</b>`;
   } else if (selectedPictures.length === 3 && correctCount < 2) {
     resultsDiv.innerHTML = `<b style="color: black; background-color: gold; border: 10px ridge silver; font: 10px;">You got ${correctCount} out of 3 correct. Sorry, you lose.</b>`;
   } else {
