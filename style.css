@@ -52,9 +52,7 @@ body {
   font-family: Arial, sans-serif;
   overflow: hidden;
   background-image: url("./images/forest.jpg");
-
   background-size: cover;
-
 }
 
 .instructions-container {
