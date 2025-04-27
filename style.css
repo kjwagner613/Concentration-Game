@@ -14,11 +14,11 @@
   font-size: 1.5em;
 }
 
-@media (orientation: portrait) {
+/* @media (orientation: portrait) {
   #rotate-message {
     display: flex;
   }
-}
+} */
 
 h1 {
   font-size: 6vh;
@@ -52,10 +52,21 @@ body {
   font-family: Arial, sans-serif;
   overflow: hidden;
   background-image: url("./images/forest.jpg");
-  background-size: contain;
-  background-repeat: no-repeat; /* Usually used with contain */
-  background-position: center; /* Often used to center the image */
+
+  background-size: cover;
+
 }
+
+.instructions-container {
+  display: flex;
+
+
+
+  align-items: left;
+
+
+}
+
 
 #game-screen {
   display: flex;
@@ -69,7 +80,8 @@ body {
 #clickToBegin {
   background-color: rgba(0, 0, 0, 0.5);
   color: red;
-  font-size: 4vh;
+  font-size: 3vh;
+  text-align: center;
 }
 
 
