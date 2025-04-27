@@ -59,11 +59,8 @@ body {
 
 .instructions-container {
   display: flex;
-
-
-
-  align-items: left;
-
+  text-align: justify;
+  overflow: scroll;
 
 }
 
